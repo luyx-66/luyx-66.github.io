@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Plan AI API cost around accepted work · APIMART Engineering</title>
+  <meta name="description" content="Estimate AI API spend using workload units, retry behavior, failed outputs, and product acceptance—not a single headline token price.">
+  <link rel="canonical" href="https://luyx-66.github.io/guides/ai-api-cost-planning/">
+  <meta name="theme-color" content="#0d1424">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Plan AI API cost around accepted work · APIMART Engineering">
+  <meta property="og:description" content="Estimate AI API spend using workload units, retry behavior, failed outputs, and product acceptance—not a single headline token price.">
+  <meta property="og:url" content="https://luyx-66.github.io/guides/ai-api-cost-planning/">
+  <meta property="og:image" content="https://luyx-66.github.io/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Plan AI API cost around accepted work · APIMART Engineering">
+  <meta name="twitter:description" content="Estimate AI API spend using workload units, retry behavior, failed outputs, and product acceptance—not a single headline token price.">
+  <meta name="twitter:image" content="https://luyx-66.github.io/assets/og.png">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Plan AI API cost around accepted work","description":"Estimate AI API spend using workload units, retry behavior, failed outputs, and product acceptance—not a single headline token price.","datePublished":"2026-07-23","dateModified":"2026-07-23","url":"https://luyx-66.github.io/guides/ai-api-cost-planning/","author":{"@type":"Organization","name":"APIMART Labs"},"publisher":{"@type":"Organization","name":"APIMART Labs","url":"https://apimart.ai/"}}</script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <div class="page-shell">
+
+  <header class="site-header">
+    <a class="brand" href="/"><span class="brand-mark">A/</span><span>APIMART Engineering</span></a>
+    <nav aria-label="Primary navigation">
+      <a aria-current="page" href="/guides/">Guides</a>
+      <a  href="/projects/">Projects</a>
+      <a  href="/about/">About</a>
+      <a class="nav-cta" href="https://apimart.ai/register?utm_source=github_pages&utm_medium=engineering_site&utm_campaign=apimart_engineering&utm_content=navigation">Try APIMART</a>
+    </nav>
+  </header>
+
+    <main id="content">
+      <article class="article">
+        <header class="article-header">
+          <a class="back-link" href="/guides/">← All guides</a>
+          <span class="eyebrow">FinOps · 7 min</span>
+          <h1>Plan AI API cost around accepted work</h1>
+          <p class="dek">The useful cost unit is the product outcome your team accepts, not always the provider billing unit.</p>
+          <div class="byline"><span>APIMART Engineering</span><time datetime="2026-07-23">2026-07-23</time></div>
+        </header>
+        <div class="article-layout">
+          <aside class="article-note"><strong>Method note</strong><p>Adapt these checks to your workload. Availability, pricing, and model behavior change over time.</p></aside>
+          <div class="article-body"><section><span class="section-index">01</span><h2>Build a workload model</h2><p>For text, record input and output token distributions. For images and video, record resolution, duration, variants, retries, and the percentage of outputs accepted by the workflow. Multiply by daily or monthly volume and keep scenario assumptions visible.</p></section><section><span class="section-index">02</span><h2>Include operational amplification</h2><p>Retries, safety rejections, model fallbacks, regenerated outputs, and polling requests can increase the effective cost of one accepted result. Model these separately so improvements to prompts, validation, or routing can be valued.</p>
+        <pre><code>effective_cost =
+  total_provider_cost
+  / accepted_product_outputs</code></pre></section><section><span class="section-index">03</span><h2>Date every price source</h2><p>Pricing and availability change. Store the source URL, currency, unit, checked date, and any volume assumptions next to each price. A calculator should accept current prices rather than hard-code a claim that will age silently.</p></section><section><span class="section-index">04</span><h2>Use scenario tools</h2><p>Try the <a href="https://github.com/luyx-66/llm-api-cost-calculator">LLM API Cost Calculator</a> for caller-supplied prices or the <a href="https://luyx-66.github.io/affordable-ai-api-comparison/">workload comparison guide</a> for text, image, and video planning.</p></section>
+            <section class="article-cta">
+              <span class="eyebrow">Run your own test</span>
+              <h2>Use supported models through one APIMART account.</h2>
+              <p>Confirm current model availability, pricing, and limits before routing production traffic.</p>
+              <a class="button inverse" href="https://apimart.ai/register?utm_source=github_pages&utm_medium=engineering_site&utm_campaign=apimart_engineering&utm_content=guide_ai-api-cost-planning">Create an APIMART account</a>
+            </section>
+          </div>
+        </div>
+      </article>
+    </main>
+
+  <footer class="site-footer">
+    <div>
+      <a class="brand" href="/"><span class="brand-mark">A/</span><span>APIMART Engineering</span></a>
+      <p>Practical notes for teams shipping AI products.</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/luyx-66">GitHub</a>
+      <a href="https://docs.apimart.ai/">API docs</a>
+      <a href="https://apimart.ai/pricing?utm_source=github_pages&utm_medium=engineering_site&utm_campaign=apimart_engineering&utm_content=footer">Pricing</a>
+    </div>
+    <p class="disclosure"><strong>Disclosure:</strong> This publication is maintained by the APIMART team. APIMART links are promotional. Benchmarks are dated, reproducible snapshots—not universal provider rankings.</p>
+  </footer>
+  </div>
+</body>
+</html>
