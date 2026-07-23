@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>OpenAI-compatible API migration checklist · APIMART Engineering</title>
+  <meta name="description" content="Move an existing OpenAI-style client to another API provider without treating base URL compatibility as the whole migration.">
+  <link rel="canonical" href="https://luyx-66.github.io/guides/openai-compatible-api-migration-checklist/">
+  <meta name="theme-color" content="#0d1424">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="OpenAI-compatible API migration checklist · APIMART Engineering">
+  <meta property="og:description" content="Move an existing OpenAI-style client to another API provider without treating base URL compatibility as the whole migration.">
+  <meta property="og:url" content="https://luyx-66.github.io/guides/openai-compatible-api-migration-checklist/">
+  <meta property="og:image" content="https://luyx-66.github.io/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="OpenAI-compatible API migration checklist · APIMART Engineering">
+  <meta name="twitter:description" content="Move an existing OpenAI-style client to another API provider without treating base URL compatibility as the whole migration.">
+  <meta name="twitter:image" content="https://luyx-66.github.io/assets/og.png">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"OpenAI-compatible API migration checklist","description":"Move an existing OpenAI-style client to another API provider without treating base URL compatibility as the whole migration.","datePublished":"2026-07-23","dateModified":"2026-07-23","url":"https://luyx-66.github.io/guides/openai-compatible-api-migration-checklist/","author":{"@type":"Organization","name":"APIMART Labs"},"publisher":{"@type":"Organization","name":"APIMART Labs","url":"https://apimart.ai/"}}</script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <div class="page-shell">
+
+  <header class="site-header">
+    <a class="brand" href="/"><span class="brand-mark">A/</span><span>APIMART Engineering</span></a>
+    <nav aria-label="Primary navigation">
+      <a aria-current="page" href="/guides/">Guides</a>
+      <a  href="/projects/">Projects</a>
+      <a  href="/about/">About</a>
+      <a class="nav-cta" href="https://apimart.ai/register?utm_source=github_pages&utm_medium=engineering_site&utm_campaign=apimart_engineering&utm_content=navigation">Try APIMART</a>
+    </nav>
+  </header>
+
+    <main id="content">
+      <article class="article">
+        <header class="article-header">
+          <a class="back-link" href="/guides/">← All guides</a>
+          <span class="eyebrow">Migration · 7 min</span>
+          <h1>OpenAI-compatible API migration checklist</h1>
+          <p class="dek">Changing a base URL is the first test, not the last. Validate the response contract and failure modes your application relies on.</p>
+          <div class="byline"><span>APIMART Engineering</span><time datetime="2026-07-23">2026-07-23</time></div>
+        </header>
+        <div class="article-layout">
+          <aside class="article-note"><strong>Method note</strong><p>Adapt these checks to your workload. Availability, pricing, and model behavior change over time.</p></aside>
+          <div class="article-body"><section><span class="section-index">01</span><h2>Inventory the contract you use</h2><p>List endpoints, model aliases, request options, streaming events, response fields, error handling, and usage metadata consumed by your code. Search the application for assumptions about provider-specific headers, finish reasons, image response formats, and tool-call serialization.</p></section><section><span class="section-index">02</span><h2>Run a compatibility matrix</h2><ol class="steps">
+          <li><strong>Authentication:</strong> verify header format and key scoping.</li>
+          <li><strong>Happy path:</strong> compare parsed responses, not just HTTP 200.</li>
+          <li><strong>Streaming:</strong> confirm event order, termination, and interrupted connections.</li>
+          <li><strong>Errors:</strong> test invalid model, invalid input, rate limit, and timeout cases.</li>
+          <li><strong>Accounting:</strong> capture usage fields and reconcile them with provider records.</li>
+        </ol></section><section><span class="section-index">03</span><h2>Keep rollback cheap</h2><p>Put the base URL, credential, model mapping, timeout, and retry policy in configuration. Avoid scattering provider checks through business logic. During rollout, keep the previous route available and move a small percentage of traffic first.</p>
+        <pre><code>client = OpenAI(
+    api_key=os.environ["AI_API_KEY"],
+    base_url=os.environ["AI_API_BASE_URL"],
+    timeout=30,
+)</code></pre></section><section><span class="section-index">04</span><h2>Use a repeatable checker</h2><p>The <a href="https://github.com/luyx-66/openai-compatible-api-provider-guide">provider compatibility guide</a> and <a href="https://github.com/luyx-66/openrouter-alternative-openai-compatible-api-provider">migration checker</a> provide fixtures you can adapt to your own routes.</p></section>
+            <section class="article-cta">
+              <span class="eyebrow">Run your own test</span>
+              <h2>Use supported models through one APIMART account.</h2>
+              <p>Confirm current model availability, pricing, and limits before routing production traffic.</p>
+              <a class="button inverse" href="https://apimart.ai/register?utm_source=github_pages&utm_medium=engineering_site&utm_campaign=apimart_engineering&utm_content=guide_openai-compatible-api-migration-checklist">Create an APIMART account</a>
+            </section>
+          </div>
+        </div>
+      </article>
+    </main>
+
+  <footer class="site-footer">
+    <div>
+      <a class="brand" href="/"><span class="brand-mark">A/</span><span>APIMART Engineering</span></a>
+      <p>Practical notes for teams shipping AI products.</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/luyx-66">GitHub</a>
+      <a href="https://docs.apimart.ai/">API docs</a>
+      <a href="https://apimart.ai/pricing?utm_source=github_pages&utm_medium=engineering_site&utm_campaign=apimart_engineering&utm_content=footer">Pricing</a>
+    </div>
+    <p class="disclosure"><strong>Disclosure:</strong> This publication is maintained by the APIMART team. APIMART links are promotional. Benchmarks are dated, reproducible snapshots—not universal provider rankings.</p>
+  </footer>
+  </div>
+</body>
+</html>
