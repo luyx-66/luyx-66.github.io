@@ -5,7 +5,7 @@ import { guides, projects, site } from "../content/site.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const registerUrl = (content) =>
-  `https://apimart.ai/register?utm_source=github_pages&utm_medium=engineering_site&utm_campaign=apimart_engineering&utm_content=${encodeURIComponent(content)}`;
+  "https://apimart-click-tracker.luyx031226.chatgpt.site/r/gh-luyx-66-github-io-register-09e1a24f";
 
 const escapeHtml = (value) =>
   String(value)
@@ -33,8 +33,8 @@ const footer = () => `
     </div>
     <div class="footer-links">
       <a href="https://github.com/luyx-66">GitHub</a>
-      <a href="https://docs.apimart.ai/">API docs</a>
-      <a href="https://apimart.ai/pricing?utm_source=github_pages&utm_medium=engineering_site&utm_campaign=apimart_engineering&utm_content=footer">Pricing</a>
+      <a href="https://apimart-click-tracker.luyx031226.chatgpt.site/r/gh-luyx-66-github-io-docs-root-8e5051ec">API docs</a>
+      <a href="https://apimart-click-tracker.luyx031226.chatgpt.site/r/gh-luyx-66-github-io-pricing-f7bf52e4">Pricing</a>
     </div>
     <p class="disclosure"><strong>Disclosure:</strong> This publication is maintained by the APIMART team. APIMART links are promotional. Benchmarks are dated, reproducible snapshots—not universal provider rankings.</p>
   </footer>`;
@@ -159,7 +159,7 @@ const homeBody = `
       <p>Use the open-source tools to test your own workload, then check current APIMART availability, pricing, and limits before choosing a route.</p>
       <div class="hero-actions">
         <a class="button inverse" href="${registerUrl("homepage_conversion")}">Create an APIMART account</a>
-        <a class="text-link light" href="https://docs.apimart.ai/">Read API documentation →</a>
+        <a class="text-link light" href="https://apimart-click-tracker.luyx031226.chatgpt.site/r/gh-luyx-66-github-io-docs-root-8e5051ec">Read API documentation →</a>
       </div>
     </section>
   </main>`;
