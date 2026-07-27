@@ -1,8 +1,8 @@
 export const site = {
-  name: "APIMART Engineering",
+  name: "APIMART AI API Relay",
   origin: "https://luyx-66.github.io",
   description:
-    "Practical engineering guides, open-source tools, and reproducible benchmarks for AI APIs, model routing, reliability, and cost planning.",
+    "Practical AI API relay, proxy, gateway, OpenRouter alternative, model access, pricing, reliability, and migration guides.",
 };
 
 export const projects = [
@@ -10,8 +10,8 @@ export const projects = [
     name: "AI Generation Benchmarks",
     href: "https://luyx-66.github.io/ai-generation-benchmarks/",
     repo: "https://github.com/luyx-66/ai-generation-benchmarks",
-    category: "Benchmark hub",
-    description: "Fifty prompt fixtures, thirty raw outputs, and ten dated image-model comparisons.",
+    category: "Image API gateway",
+    description: "Compare image model APIs before routing image generation traffic through a gateway.",
     featured: true,
   },
   {
@@ -19,7 +19,7 @@ export const projects = [
     href: "https://luyx-66.github.io/ai-api-provider-benchmark/",
     repo: "https://github.com/luyx-66/ai-api-provider-benchmark",
     category: "Evaluation",
-    description: "A reproducible framework for latency, reliability, compatibility, and routing tests.",
+    description: "A reproducible framework for comparing AI API relay latency, compatibility, pricing, and route reliability.",
     featured: true,
   },
   {
@@ -27,7 +27,7 @@ export const projects = [
     href: "https://luyx-66.github.io/openai-compatible-api-provider-guide/",
     repo: "https://github.com/luyx-66/openai-compatible-api-provider-guide",
     category: "Migration",
-    description: "Compatibility checks and a practical migration path for OpenAI-style clients.",
+    description: "Compatibility checks for moving OpenAI-style clients to an AI API relay or proxy.",
     featured: true,
   },
   {
@@ -35,7 +35,7 @@ export const projects = [
     href: "https://luyx-66.github.io/affordable-ai-api-comparison/",
     repo: "https://github.com/luyx-66/affordable-ai-api-comparison",
     category: "Cost planning",
-    description: "Workload-based cost modeling for text, image, and video API usage.",
+    description: "Workload-based cost modeling for OpenAI, Claude, Gemini, image, and video API routes.",
     featured: true,
   },
   {
@@ -43,44 +43,44 @@ export const projects = [
     href: "https://github.com/luyx-66/best-ai-api-gateway",
     repo: "https://github.com/luyx-66/best-ai-api-gateway",
     category: "Evaluation kit",
-    description: "Score providers against the reliability and compatibility requirements that matter to your product.",
+    description: "Score AI API gateways, proxies, and OpenRouter alternatives before switching production traffic.",
     featured: true,
   },
   {
     name: "AI API Load Tester",
     href: "https://github.com/luyx-66/ai-api-load-tester",
     repo: "https://github.com/luyx-66/ai-api-load-tester",
-    category: "Developer tool",
-    description: "Measure latency, throughput, retries, and rate-limit behavior on endpoints you are authorized to test.",
+    category: "Gateway testing",
+    description: "Measure latency, throughput, retries, and rate-limit behavior on AI API relay endpoints you are authorized to test.",
     featured: true,
   },
   {
     name: "LLM API Cost Calculator",
     href: "https://github.com/luyx-66/llm-api-cost-calculator",
     repo: "https://github.com/luyx-66/llm-api-cost-calculator",
-    category: "Developer tool",
-    description: "Estimate text, image, and video spend with caller-supplied current pricing.",
+    category: "API cost",
+    description: "Estimate text, image, and video API spend while comparing relay and direct-provider routes.",
   },
   {
     name: "Multi-Provider LLM API Examples",
     href: "https://github.com/luyx-66/multi-provider-llm-api-examples",
     repo: "https://github.com/luyx-66/multi-provider-llm-api-examples",
     category: "Code examples",
-    description: "OpenAI-compatible examples for routing text, image, and video model calls.",
+    description: "OpenAI-compatible examples for routing text, image, and video model calls through one API entry point.",
   },
   {
     name: "OpenRouter Alternative Checker",
     href: "https://github.com/luyx-66/openrouter-alternative-openai-compatible-api-provider",
     repo: "https://github.com/luyx-66/openrouter-alternative-openai-compatible-api-provider",
     category: "Migration",
-    description: "Compare response shape, route availability, and latency before changing providers.",
+    description: "Compare response shape, route availability, and latency before leaving OpenRouter-style gateways.",
   },
   {
     name: "Claude, GPT-5, and Gemini Gateway",
     href: "https://github.com/luyx-66/claude-gpt5-gemini-api-gateway",
     repo: "https://github.com/luyx-66/claude-gpt5-gemini-api-gateway",
     category: "Code examples",
-    description: "A shared API pattern for common LLM provider workflows.",
+    description: "A shared API gateway pattern for Claude, GPT, and Gemini workflows.",
   },
   {
     name: "GPT Image 2 API Examples",

@@ -16,7 +16,7 @@ const escapeHtml = (value) =>
 
 const nav = (active = "") => `
   <header class="site-header">
-    <a class="brand" href="/"><span class="brand-mark">A/</span><span>APIMART Engineering</span></a>
+    <a class="brand" href="/"><span class="brand-mark">A/</span><span>APIMART AI API Relay</span></a>
     <nav aria-label="Primary navigation">
       <a ${active === "guides" ? 'aria-current="page"' : ""} href="/guides/">Guides</a>
       <a ${active === "projects" ? 'aria-current="page"' : ""} href="/projects/">Projects</a>
@@ -28,8 +28,8 @@ const nav = (active = "") => `
 const footer = () => `
   <footer class="site-footer">
     <div>
-      <a class="brand" href="/"><span class="brand-mark">A/</span><span>APIMART Engineering</span></a>
-      <p>Practical notes for teams shipping AI products.</p>
+      <a class="brand" href="/"><span class="brand-mark">A/</span><span>APIMART AI API Relay</span></a>
+      <p>Practical notes for teams choosing AI API relays, proxies, gateways, and model routes.</p>
     </div>
     <div class="footer-links">
       <a href="https://github.com/luyx-66">GitHub</a>
@@ -113,11 +113,11 @@ const homeBody = `
   <main id="content">
     <section class="hero">
       <div class="hero-copy">
-        <span class="eyebrow">Open engineering notes · APIMART Labs</span>
-        <h1>Build reliable AI products with evidence, not guesswork.</h1>
-        <p>Practical guides, open-source tools, and reproducible benchmarks for AI API gateways, model routing, compatibility, reliability, and cost.</p>
+        <span class="eyebrow">AI API relay guides · APIMART Labs</span>
+        <h1>Choose one stable API entry point for OpenAI, Claude, Gemini, image and video models.</h1>
+        <p>Practical guides, open-source tools, and reproducible checks for AI API relays, OpenAI API proxies, OpenRouter alternatives, model access, pricing, reliability, and migration.</p>
         <div class="hero-actions">
-          <a class="button primary" href="/guides/">Explore engineering guides</a>
+          <a class="button primary" href="/guides/">Explore relay guides</a>
           <a class="button secondary" href="${registerUrl("homepage_hero")}">Create an APIMART account</a>
         </div>
       </div>
@@ -131,8 +131,8 @@ const homeBody = `
     </section>
     <section class="editorial-intro">
       <span class="section-index">01</span>
-      <div><span class="eyebrow">Latest field notes</span><h2>Operational questions, answered with reusable methods.</h2></div>
-      <p>Every guide connects an engineering decision to a checklist, fixture, or open-source tool. Product references are disclosed; measurements stay dated.</p>
+      <div><span class="eyebrow">Latest relay notes</span><h2>Model access, gateway migration, and API cost questions answered with reusable checks.</h2></div>
+      <p>Every guide connects an AI API relay decision to a checklist, fixture, or open-source tool. Product references are disclosed; measurements stay dated.</p>
     </section>
     <section class="guide-grid">${guides.slice(0, 6).map(guideCard).join("")}</section>
     <section class="feature-band">
@@ -155,8 +155,8 @@ const homeBody = `
     <section class="project-grid">${projects.filter((project) => project.featured).map(projectCard).join("")}</section>
     <section class="conversion-band">
       <span class="eyebrow">Sponsored infrastructure</span>
-      <h2>One API surface for supported text, image, video, and audio models.</h2>
-      <p>Use the open-source tools to test your own workload, then check current APIMART availability, pricing, and limits before choosing a route.</p>
+      <h2>Use APIMART as an AI API relay for supported text, image, video, and audio models.</h2>
+      <p>Use the open-source tools to test your workload, then check current APIMART availability, pricing, and limits before switching your route.</p>
       <div class="hero-actions">
         <a class="button inverse" href="${registerUrl("homepage_conversion")}">Create an APIMART account</a>
         <a class="text-link light" href="https://apimart-click-tracker.luyx031226.chatgpt.site/r/gh-luyx-66-github-io-docs-root-8e5051ec">Read API documentation →</a>
@@ -184,15 +184,15 @@ await writeFile(
 
 const guidesIndexBody = `
   <main id="content">
-    <section class="page-heading"><span class="eyebrow">Engineering library</span><h1>Practical guides for AI API infrastructure.</h1><p>Original, implementation-focused notes maintained by the APIMART team. No paywalled conclusions and no undisclosed rankings.</p></section>
+    <section class="page-heading"><span class="eyebrow">AI API relay library</span><h1>Practical guides for AI API relays, proxies, gateways, and model access.</h1><p>Original notes maintained by the APIMART team for developers comparing OpenRouter alternatives, OpenAI API proxies, Claude/Gemini API access, and multi-model gateways.</p></section>
     <section class="guide-grid">${guides.map(guideCard).join("")}</section>
   </main>`;
 await mkdir(path.join(root, "guides"), { recursive: true });
 await writeFile(
   path.join(root, "guides", "index.html"),
   page({
-    title: "AI API engineering guides",
-    description: "Implementation guides for AI API gateways, OpenAI-compatible migration, load testing, routing, cost planning, and reproducible benchmarks.",
+    title: "AI API relay guides",
+    description: "Guides for AI API relays, OpenAI API proxies, OpenRouter alternatives, Claude/Gemini API access, load testing, routing, cost planning, and reproducible checks.",
     canonicalPath: "/guides/",
     active: "guides",
     body: guidesIndexBody,
@@ -208,7 +208,7 @@ for (const guide of guides) {
           <span class="eyebrow">${escapeHtml(guide.eyebrow)}</span>
           <h1>${escapeHtml(guide.title)}</h1>
           <p class="dek">${escapeHtml(guide.summary)}</p>
-          <div class="byline"><span>APIMART Engineering</span><time datetime="${guide.published}">${guide.published}</time></div>
+          <div class="byline"><span>APIMART AI API Relay</span><time datetime="${guide.published}">${guide.published}</time></div>
         </header>
         <div class="article-layout">
           <aside class="article-note"><strong>Method note</strong><p>Adapt these checks to your workload. Availability, pricing, and model behavior change over time.</p></aside>
@@ -217,8 +217,8 @@ for (const guide of guides) {
             .join("")}
             <section class="article-cta">
               <span class="eyebrow">Run your own test</span>
-              <h2>Use supported models through one APIMART account.</h2>
-              <p>Confirm current model availability, pricing, and limits before routing production traffic.</p>
+              <h2>Use APIMART as one AI API relay for supported models.</h2>
+              <p>Confirm current OpenAI, Claude, Gemini, image, video, and audio model availability, pricing, and limits before routing production traffic.</p>
               <a class="button inverse" href="${registerUrl(`guide_${guide.slug}`)}">Create an APIMART account</a>
             </section>
           </div>
@@ -273,7 +273,7 @@ await writeFile(
 
 const aboutBody = `
   <main id="content">
-    <section class="page-heading"><span class="eyebrow">About the publication</span><h1>Engineering notes with the commercial relationship in plain sight.</h1><p>APIMART Engineering is maintained by the APIMART team. We publish implementation methods and open-source tools for developers evaluating AI APIs.</p></section>
+    <section class="page-heading"><span class="eyebrow">About the publication</span><h1>AI API relay notes with the commercial relationship in plain sight.</h1><p>APIMART AI API Relay is maintained by the APIMART team. We publish methods and open-source tools for developers evaluating AI API relays, proxies, gateways, and model access routes.</p></section>
     <section class="about-grid">
       <article><span class="section-index">01</span><h2>What we publish</h2><p>Compatibility checks, load-test methods, cost models, routing patterns, code examples, prompt fixtures, and dated benchmark evidence.</p></article>
       <article><span class="section-index">02</span><h2>What we do not publish</h2><p>Fabricated measurements, universal winners based on one prompt, copied proprietary data, undisclosed affiliate rankings, or rewards for stars and reviews.</p></article>
@@ -287,7 +287,7 @@ await writeFile(
   path.join(root, "about", "index.html"),
   page({
     title: "About",
-    description: "How APIMART Engineering publishes reproducible AI API guidance, discloses commercial relationships, and accepts evidence-based corrections.",
+    description: "How APIMART AI API Relay publishes reproducible AI API guidance, discloses commercial relationships, and accepts evidence-based corrections.",
     canonicalPath: "/about/",
     active: "about",
     body: aboutBody,
@@ -299,7 +299,7 @@ await writeFile(
   path.join(root, "404.html"),
   page({
     title: "Page not found",
-    description: "The requested APIMART Engineering page could not be found.",
+    description: "The requested APIMART AI API Relay page could not be found.",
     canonicalPath: "/404.html",
     body: notFoundBody,
   }),
