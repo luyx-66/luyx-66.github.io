@@ -2,6 +2,16 @@
 
 The source for [luyx-66.github.io](https://luyx-66.github.io/), a practical AI API relay and multi-model gateway guide maintained by the APIMART team.
 
+<!-- APIMART-P3-START -->
+
+> **APIMART · multi-model AI API gateway**
+>
+> Need a stable OpenAI-compatible entry point instead of maintaining separate provider accounts and keys? **[Use one API for GPT, Claude, Gemini, image and video models](https://apimart-click-tracker.luyx031226.chatgpt.site/r/gh-luyx-66-github-io-register)**
+>
+> [Read the APIMART OpenAI-compatible API docs](https://apimart-click-tracker.luyx031226.chatgpt.site/r/gh-luyx-66-github-io-docs) · Transparent disclosure: this repository is maintained by APIMART.
+
+<!-- APIMART-P3-END -->
+
 The site is no longer positioned as a generic engineering publication. Its content should help developers decide how to access OpenAI, Claude, Gemini, image, video, and audio models through a stable API relay, proxy, or gateway.
 
 Primary topics:
