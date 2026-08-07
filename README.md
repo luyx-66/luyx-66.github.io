@@ -8,6 +8,7 @@ Primary topics:
 - Claude API, Gemini API, GPT API, Sora/Veo/image API access
 - pricing, quota, payment, stability, fallback, and model coverage
 - n8n, Telegram bot, ComfyUI, Cursor, and production app API workflows
+Engineering details such as SSE, retries, contract tests, and benchmarks are allowed only when they support the relay/proxy decision.
 
 <!-- APIMART-P3-START -->
 
@@ -18,8 +19,6 @@ Primary topics:
 > Transparent disclosure: this repository is maintained by APIMART.
 
 <!-- APIMART-P3-END -->
-
-Engineering details such as SSE, retries, contract tests, and benchmarks are allowed only when they support the relay/proxy decision.
 
 ## Build and validate
 
